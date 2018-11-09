@@ -1,0 +1,730 @@
+// ------------------RESET----------------------
+@import '_reset';
+// ------------VARIABLES DE COLOR----------------
+$blanco:#fff;
+$gris:#F5F5FF;
+$morado:#2C204B;
+$azul:#3E8BCB;
+$sombra:#E3DBFA;
+$grisO:#2B2B2B;
+$grisV:#595959;
+$verde: #0FD63E;
+$rojo: #FF3A18;
+// ---------------FONT---------------
+$font-stack: 'Varela Round', sans-serif !important;
+// ----------------HTML------------------------
+html{
+  @extend %cien;
+}
+// -----------------EXTENDER-------------------
+%padding{
+  padding: 0px !important;
+}
+%cien{
+  width: 100%;
+  height: 100%;
+}
+%req{
+  position: relative;
+  float: left;
+}
+%gris{
+  color:rgba(0,0,0,.7);
+}
+%inp{
+  width: 100%;
+  @extend %req;
+  margin-top: 30px;
+  border:none;
+  border-bottom: 1.3px solid $blanco;
+  height: 30px;
+  outline: none;
+  background: transparent;
+  padding-left: 15px;
+  color:$blanco;
+  font-size: 1.1em;
+}
+%bot{
+  height: 35px;
+  width: 150px;
+  background-color:$azul;
+  @extend %req;
+  border:none;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-left: calc(50% - 75px);
+  outline: none;
+  color:$blanco;
+  font-size: 1.3em;
+}
+%flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+%elip{
+  text-overflow: ellipsis !important;
+  white-space:nowrap;
+  overflow:hidden;
+}
+%h1{
+  height: 30px;
+  width: 100%;
+  color:$azul;
+  font-size: 1.9em;
+  @extend %req;
+  text-align: center;
+  margin:0;
+  margin-top:20px;
+}
+%h2{
+  width: 100%;
+  @extend %gris;
+  font-size: 1.2em;
+  @extend %req;
+  text-align: center;
+  margin: 0;
+}
+// -------------------BODY---------------------
+body{
+  height: 100%;
+  width: 100%;
+  font-family: $font-stack;
+  background-color: $grisO !important;
+}
+// ---------------------LOGIN------------------------
+// -----CONTENEDOR GRANDE EN TODAS LAS PANTALLAS-----
+#contenedorG{
+  width: 100%;
+  @extend %padding;
+}
+// -----CONTENEDOR INFORMACION-----
+.datos{
+  @extend %padding;
+  @extend %cien;
+}
+.logos{
+  @extend %padding;
+  margin-top: 50px;
+  height: 80px;
+  width: 100%;
+}
+.img2{
+  width: 30%;
+  height: 100%;
+  @extend %req;
+}
+.img2 img{
+  height: 100%;
+  margin-left:10px;
+}
+.tit{
+  width: 70%;
+  height: 100%;
+  @extend %req;
+}
+.tit>h1{
+  height: 30px;
+  width: 100%;
+  color:$blanco;
+  font-size: 1.5em;
+  @extend %req;
+  margin: 0;
+}
+// ------------------CONTENEDOR INPUTS---------------
+.inputs{
+  margin-top: 100px;
+  width: 100%;
+  height: 400px;
+  @extend %req;
+}
+  .in>input{
+    @extend %inp;
+}
+.in>button{
+    @extend %bot;
+}
+::-webkit-input-placeholder {
+  color:$blanco;
+}
+  button:hover{
+    background-color:$blanco;
+    color:$azul;
+  }
+// -----------------CINPUT----------------
+.in{
+  width: 75%;
+  height: 150px;
+  @extend %req;
+  margin-top: 30px;
+  left: 10%;
+}
+// ----------------IMAGEN INPUTS--------------
+.imgInp{
+  width:5%;
+  @extend %req;
+  height: 150px;
+  left: 10%;
+  margin-top: 30px;
+}
+.imgInp>.fas{
+  color:$blanco;
+  font-size: 20px;
+  @extend %req;
+  margin-top: 39px;
+}
+// ------CONTENEDOR IMAGEN------
+.imagen{
+  @extend %cien;
+  @extend %padding;
+  background-image: url(../img/pos.JPG);
+  background-size: cover;
+}
+.txt{
+  width: 100%;
+  height: 90px;
+  margin-top: calc(50% - 100px);
+}
+.txt>h1{
+  color:$blanco;
+  font-size:6em;
+  width: 70%;
+  height: 100%;
+  margin-left:15%;
+  text-align: center;
+}
+// -----------------------ALUMNO--------------------------
+// ----------HEADER---------
+//ESTA EN ALUMNO TANTO EN ADMINISTRADOR
+.fichaMayor{
+  @extend %req;
+  @extend %padding;
+}
+.header{
+  height: 190px;
+  margin-top: 40px;
+  background: $blanco;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.perfil{
+  width: 60%;
+  height: 100px;
+  margin-left: 20%;
+  @extend %flex;
+  @extend %req;
+}
+.foto{
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  border: 1px solid $azul;
+  @extend %req;
+}
+.logOut{
+  width: 20%;
+  height: 100px;
+  @extend %req;
+}
+.fas{
+  font-size: 30px;
+  float: right;
+  margin-top: 20px;
+  margin-right: 20px;
+  @extend %gris;
+  cursor: pointer;
+}
+.fas:hover{
+  color: $azul;
+}
+.datosA{
+  width: 100%;
+  height: 50px;
+  @extend %req;
+}
+.datosA>h1{
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  height: 25px;
+  color:$morado;
+  @extend %req;
+  margin: 0;
+  line-height: 1.5em;
+  text-transform: uppercase;
+}
+.datosA>p{
+  width: 100%;
+  height: 25px;
+  @extend  %req;
+  text-align: center;
+  font-size: 1em;
+  @extend %gris;
+}
+// ----------------MENU--------------------
+.menu{
+  width: 100%;
+  height: 40px;
+  background: $azul;
+  @extend  %req;
+  border-bottom: 1px solid $blanco;
+}
+.opcion{
+  width: 90%;
+  height: 100%;
+  @extend %req;
+  left: 5%;
+}
+.opcion>p{
+  @extend %cien;
+  @extend  %req;
+  text-align: center;
+  font-size: 1.3em;
+  line-height: 2.3em;
+  color:$blanco;
+  text-transform: uppercase;
+  @extend %elip;
+}
+.down{
+  width: 5%;
+  height: 100%;
+  @extend %req;
+  @extend %flex;
+}
+#dw{
+  color:$blanco;
+  @extend %req;
+  margin: 0 !important;
+}
+// ------CONTENIDO------
+.contenido{
+  background: $blanco;
+  height: 400px;
+  @extend %req;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.documentosCon{
+  width: 100%;
+  height: 30px;
+  @extend %req;
+  background: $gris;
+  border-bottom: .5px solid $sombra;
+}
+#doc{
+  @extend %elip;
+}
+#grisM{
+  color: $grisV;
+}
+#sub{
+  color: $grisV;
+}
+#grisM:hover{
+  color: $azul;
+}
+#sub:hover{
+  color: $azul;
+}
+.nom{
+  width: 20%;
+  height: 100%;
+  @extend %req;
+  @extend %flex;
+}
+.nom>p{
+  text-align: center;
+  font-size: 1em;
+  margin-top: 10px;
+  @extend %gris;
+  @extend %req;
+  width: 100%;
+  height: 80%;
+  margin:10%;
+  @extend %elip;
+}
+.apro{
+  width: 15%;
+  height: 30px;
+  @extend %req;
+  background: $gris;
+  text-align: center;
+  border-bottom: 1px solid $sombra;
+  @extend %flex;
+}
+#verde{
+  color:$verde;
+}
+#rojo{
+  color:$rojo;
+}
+#gris{
+  color: $grisV;
+}
+.opciones2 p{
+  text-align: center;
+  font-size: 1em;
+  margin-top: 10px;
+  @extend %gris;
+  @extend %req;
+  width: 100%;
+  height: 80%;
+  @extend %elip;
+}
+.apro>.fas{
+  color:$azul;
+  margin: 0;
+  font-size: 20px;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.nom>.fas{
+  color:$azul;
+  margin: 0;
+  font-size: 20px;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.nom2>.fas{
+  color:$azul;
+  margin: 0;
+  font-size: 20px;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.inputR , .nombreDoc , .opcionD{
+  width: 30%;
+  margin-left: 3.3%;
+  height: 100%;
+  @extend %req;
+}
+.nombreDoc>p{
+  text-align: center;
+  width: 100%;
+  @extend %gris;
+  font-size: 1.2em;
+}
+.far{
+  float: right;
+  font-size: 20px;
+  margin-top: 2px;
+  @extend %gris;
+  margin-right: 30px;
+}
+// ---------------MENU PLAN DE ESTUDIOS-------------------
+  .menuCO{
+    width: 100%;
+    @extend %req;
+    height: 0px;
+    background: $azul;
+    transition: 1.5 ease-in-out;
+    z-index: 99999;
+  }
+  .menuCO2{
+    width: 100%;
+    @extend %req;
+    transition: .2;
+  }
+  .opciones2{
+    width: 85%;
+    height: 30px;
+    @extend  %req;
+    background: $gris;
+    text-align: center;
+    border-bottom: 1px solid $sombra;
+  }
+  .opciones{
+    width: 100%;
+    height: 30px;
+    @extend  %req;
+    background: $azul;
+    border-bottom: 1px solid $sombra;
+    display: none;
+  }
+  .opciones>p{
+    text-align: center;
+    color:$blanco;
+    @extend %elip;
+  }
+  .pos{
+    display: block !important;
+  }
+  .alumnosN{
+    width: 100%;
+    height: 30px;
+    @extend  %req;
+    background: $gris;
+    border-bottom: 1px solid $azul;
+  }
+    .nombreA{
+      width: 45%;
+      height: 100%;
+      @extend %req;
+    }
+    .nombreA>p{
+      font-size: 1.2em;
+      @extend %gris;
+      @extend %req;
+      @extend %cien;
+      padding-left: 30px;
+      margin-top:3px;
+      @extend %elip;
+    }
+    .sem{
+      width: 40%;
+      height: 100%;
+      @extend %req;
+    }
+    .sem>p{
+      font-size: 1.2em;
+      @extend %gris;
+      @extend %req;
+      @extend %cien;
+      padding-left: 30px;
+      margin-top:3px;
+      @extend %elip;
+    }
+    .flec{
+      width: 15%;
+      height: 100%;
+      @extend %req;
+      @extend %flex;
+    }
+    .flec>.fas{
+      font-size: 2em;
+      color: rgba(0,0,0,.6) !important;
+      margin: 0;
+    }
+  // -----------------MODAL--------------------
+  .osc{
+    @extend %cien;
+    background: rgba(0,0,0,.8);
+    @extend %req;
+    display: none;
+    position: absolute !important;
+    z-index: 9999;
+    @extend %padding;
+    margin: 0%;
+  }
+  // ---------------------------VENTANA MODAL-------------------
+  .ventanaNo , .ventanaOk , .ventanaSub , .ventanaVE{
+    height: 200px;
+    @extend %padding;
+    margin-top: 100px;
+    background: $blanco;
+    border-radius: 15px;
+    display: none;
+    position: absolute !important;
+  }
+  // -----------VENTANA SUBIR DOC-------------
+   #ventanaSubir{
+     height: 250px;
+   }
+  .file-input-wrapper > input[type="file"] {
+    font-size: 200px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+  }
+  .file-input-wrapper > .btn-file-input {
+    display: inline-block;
+    width: 200px;
+    margin: 0;
+    height: 35px;
+  }
+   // --------------CERRAR MODAL---------------
+  .cerrar{
+    width: 5%;
+    @extend %req;
+    @extend %flex;
+  }
+  .cerrar2{
+    width: 100%;
+    @extend %req;
+  }
+  .equis{
+    height: 25px;
+    width: 25px;
+    margin-top: 15px;
+    border-radius: 50%;
+    @extend %req;
+    background: $azul;
+    float: right;
+    cursor: pointer;
+    @extend %flex;
+  }
+    .equis2{
+      height: 25px;
+      width: 25px;
+      margin-top: 15px;
+      border-radius: 50%;
+      @extend %req;
+      background: $azul;
+      float: right;
+      cursor: pointer;
+      @extend %flex;
+      margin-right: 15px;
+    }
+    .equis>.fas{
+      font-size: 1em;
+      color: $blanco;
+      margin: 0;
+    }
+    .equis2>.fas{
+      font-size: 1em;
+      color: $blanco;
+      margin: 0;
+    }
+    // --------------------BOTONES MODAL-------------------
+  .botonesModal{
+    height: 100px;
+    @extend %req;
+    @extend %flex;
+  }
+  .botonesModal button{
+    @extend %bot;
+    margin: 0;
+    margin: 25px;
+  }
+  .botonesModal button:hover{
+    border: 1px solid $azul;
+  }
+  // ----------------------VER MAS----------------------
+  .ventanaMas{
+    background: $blanco;
+    margin-top: 40px;
+    border-radius: 15px;
+    @extend %padding;
+    display: none;
+    position: absolute !important;
+  }
+  .datosMoV{
+    width: 100%;
+    height: 90px;
+    @extend %req;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+  }
+    .datosMo{
+      @extend %req;
+    }
+    .datosMo2{
+      height: 100%;
+      width: 95%;
+      @extend %req;
+      margin: 0px;
+    }
+    .datosMo>h1{
+      @extend %h1;
+    }
+    .datosMo2>h1{
+      @extend %h1;
+      font-size: 1.7em;
+      margin-left: 4%;
+    }
+    .datosMo>h2{
+      @extend %h2;
+      margin-top: 5px;
+    }
+    .datosMo2>h2{
+      @extend %h2;
+      margin-left: 4%;
+    }
+  .informacionModal{
+    @extend %padding;
+    @extend %req;
+    height: 400px;
+    top:0px;
+  }
+    .resumenModal{
+      height: 100%;
+      @extend %req;
+    }
+    .resumenModal>p{
+      @extend  %req;
+      text-align: justify;
+      font-size: 1em;
+    }
+    .resumenModal>h2{
+      width: 100%;
+      color:$azul;
+      font-size: 1.3em;
+      @extend %req;
+    }
+    .comentariosModal{
+      height: 100%;
+      @extend %req;
+      background: $sombra;
+      border-bottom-right-radius: 15px;
+      @extend %flex;
+      flex-direction: column;
+    }
+    .comentariosModal>h2{
+      width: 100%;
+      @extend %gris;
+      font-size: 1.1em;
+      @extend %req;
+    }
+    textarea{
+      width: 100%;
+      height: 70%;
+      resize: none;
+      outline: none;
+      border: none;
+    }
+    textarea::placeholder {
+      color:rgba(0,0,0,.2);
+    }
+    .comentariosModal>button{
+      @extend %bot;
+      margin: 0px;
+      margin-top: 15px;
+      width: 165px;
+      font-size: 1em;
+    }
+// -------------FOOTER-----------
+footer{
+  width: 100%;
+  height: 30px;
+  position: fixed;
+  bottom: 0;
+  background: $grisO;
+}
+footer>p{
+  width: 100%;
+  text-align: center;
+  font-size: .7em;
+  @extend %gris;
+  color:$blanco;
+}
+// --------------PARTICLES-----------
+canvas{
+  position: absolute;
+  top:0;
+  z-index: -1;
+}
+// ------------DETAILS---------
+details summary::-webkit-details-marker {
+    font-size: 0px;
+}
+summary{
+  outline: none !important;
+}
+// ----------------MEDIA Q-------------------
+@media screen and (max-width: 800px) {
+  .header{
+    margin-top: 0px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+  .contenido{
+    height: 440px;
+  }
+  .datos{
+    height: 100%;
+    width: 100%;
+  }
+}

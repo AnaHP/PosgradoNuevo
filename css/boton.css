@@ -1,0 +1,17 @@
+  #envio	input[type="submit"]{
+  		border-style: none;
+  		width: 30%;
+  		height: 80%;
+  		border-style: none;
+  		text-align: center;
+  		background-color: transparent;
+  		outline: none;
+  		color:white;
+      margin-top: 10px;
+      margin-left: 30%;
+      position: center;
+  		cursor: pointer;
+  		font-weight: bold;
+  		font-family: 'Segoe UI';
+  		font-size: 1em;
+  	}
